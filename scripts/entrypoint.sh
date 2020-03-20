@@ -19,4 +19,3 @@
 
 #. /opt/script/config.sh # Apply configuration to connect to environment registry
 
-sudo /opt/efm/efm-*/bin/efm.sh run
