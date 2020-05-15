@@ -33,13 +33,13 @@ export minifi_props_file=${MINIFI_HOME}/conf/nifi.properties
 export minifi_conf_file=${MINIFI_HOME}/conf/bootstrap.conf
 
 
-wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-azure-nar-1.8.0.3.3.1.0-10.nar
-wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-standard-services-api-nar-1.8.0.3.3.1.0-10.nar
-wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/minifi_nars/nifi-http-context-map-nar-1.8.0.3.3.1.0-10.nar
+#wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-azure-nar-1.8.0.3.3.1.0-10.nar
+#wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-standard-services-api-nar-1.8.0.3.3.1.0-10.nar
+#wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/minifi_nars/nifi-http-context-map-nar-1.8.0.3.3.1.0-10.nar
 
 #aws nars
-wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-aws-service-api-nar-1.8.0.3.3.1.0-10.nar
-wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-aws-nar-1.8.0.3.3.1.0-10.nar
+#wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-aws-service-api-nar-1.8.0.3.3.1.0-10.nar
+#wget -P ${MINIFI_HOME}/lib/ https://sunileman.s3.amazonaws.com/CEM/minifi_nars/nifi-aws-nar-1.8.0.3.3.1.0-10.nar
 
 if [ ! -z "${NIFI_C2_ENABLE}" ]; then
     uncomment "nifi.c2.enable"
@@ -153,5 +153,7 @@ prop_replace 'nifi.provenance.repository.rollover.time' "${NIFI_PROV_REPO_RV_TIM
 #prop_replace 'nifi.security.user.login.identity.provider' "${NIFI_SEC_USR_LOGIN_ID_PROV}" ${MINIFI_HOME}/conf/nifi.properties
 
 #prop_replace 'nifi.security.support.new.account.requests' "${NIFI_SEC_SUP_NEW_ACC_REQ}" ${MINIFI_HOME}/conf/nifi.properties
+
+
 
 
